@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import com.powluiz.forexwearos.presentation.screen.ForexScreen
+import com.powluiz.forexwearos.presentation.theme.ForexWearOSTheme
 
 
 class MainActivity : ComponentActivity() {
@@ -12,7 +14,11 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setTheme(android.R.style.Theme_DeviceDefault)
 
-        setContent {}
+        setContent {
+            ForexWearOSTheme {
+                ForexScreen()
+            }
+        }
     }
 }
 

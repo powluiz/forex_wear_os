@@ -15,11 +15,14 @@ data class CurrencyData(
     @SerializedName("bid")
     val bid: String,
 
+    @SerializedName("varBid")
+    val varBid: String,
+
     @SerializedName("ask")
     val ask: String,
 
     @SerializedName("pctChange")
-    val percentChange: String,
+    val pctChange: String,
 
     @SerializedName("high")
     val high: String,
@@ -29,4 +32,13 @@ data class CurrencyData(
 
     @SerializedName("timestamp")
     val timestamp: String
+)
+
+data class ForexDisplay(
+    val pair: String,
+    val name: String,
+    val bidPrice: String,
+    val variation: String,
+    val pctChange: String,
+    val isPositive: Boolean
 )
