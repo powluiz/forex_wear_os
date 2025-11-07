@@ -13,15 +13,6 @@ object RetrofitClient {
     private const val API_KEY = BuildConfig.AWESOME_API_KEY
     private const val BASE_URL = "https://economia.awesomeapi.com.br/"
 
-    init {
-        if (API_KEY.isBlank() || API_KEY == "null") {
-            throw IllegalStateException(
-                "AWESOME_API_KEY não foi definida no arquivo local.properties!"
-            )
-        }
-    }
-
-
     private val headerInterceptor = Interceptor { chain ->
         val originalRequest = chain.request()
         val newRequest = originalRequest.newBuilder()
